@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,  initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+* {
+  box-sizzing: border-box;
+}
+
+body {
+   font-family: Verdana, sans-serif;
+
+ }
+
+.img1{
+  background:url("./images/S1.jpeg");
+}
+
+.mySlides {
+         display: none;
+        }
+
+img {
+    vertical-align: middle;
+   }
+
+.slideshow-container {
+           max-width: 1000px;
+           position: relative;
+           margin: auto;
+          }
+
+.prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+          }
+
+.next{
+       right: 0;
+       border-radius: 3px  0 0 3px;
+     }
+
+.prev:hover, .next:hover{
+                           background-color:  rgba(0,0,0,0.8);
+                          }
+
+.text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 20px 15px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 40%;
+      background: rgba (0,0,0,.8);
+      text-align: left;
+     }
+
+
+ .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: transparent;
+      border-color: #ddd;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;
+      display: inline-block;
+      transition: border-color 0.6s ease;
+     }
+
+
+  .active, .dot:hover {
+          border-color: #717171;
+          }
+
+  .fade {
+        -webkit-animation-name: fade-image;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade-image;
+        animation-duration: 1.5s;
+       }
+
+       @-webkit-keyframes fade-Image
+       {
+         from {opacity: .4}
+         to {opacity: 1}
+       }
+
+       @keyframes fade-Image
+       {
+         from {opacity:.4}
+         to {opacity: 1}
+       }
+
+       @media only screen and (max-width: 300px)
+       {
+         .text {font-size: 11px}
+       }
+</style>
+
+</head>
+<body>
+  <div class="container">
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+     <img src="./images/S1.jpeg" alt="img1" style="width:100%">
+     <div class="text">Image Caption 1</div>
+   </div>
+
+  <div class="mySlides fade">
+    <div class="img1"></div>
+     <img src="./images/S2.jpg" alt="img2" style="width:100%">
+     <div class="text">Image Caption 2</div>
+   </div>
+
+  <div class="mySlides fade">
+    <img src="./images/S3.jpg" alt="img3" style="width:100%">
+    <div class="text">Image Caption 3</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="./images/S4.jpg" alt="img4" style="width:100%">
+    <div class="text">Image Caption 4</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style ="text-align:center">
+   <span class="dot"></span>
+   <span class="dot"></span>
+   <span class="dot"></span>
+</div>
+</div>
+
+<div class="container">
+    <div class="row Row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="card-body about">
+                    <h5 class="card-title">About</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Click here</a>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="card-body product">
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Click here</a>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="col-md-3 service">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Click here</a>
+                </div>
+            </div>
+            <div class="col-md-5 contact">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Full Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="email" class="form-control" id="emai1" aria-describedby="emailHelp">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Message</label>
+                                <textarea type="password" class="form-control" id="exampleInputPassword1"></textarea>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Services we provide</h3>
+        <hr>
+        <p>Lorem ipsum dolor ,onsequuntur consectetur recusandae ipsum itaque dolor fugit.</p>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="" alt="Image1" />
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Image2" />
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Image3" />
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="" alt="Image1" />
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Image2" />
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                        mauris
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <img src="" alt="Image3" />
+                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                    </p>
+                    <p><a class="btn btn-secondary" href="#" role="button">Read more &raquo;</a></p>
+                </div>
+            </div>
+
+            <hr>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <h3>Latest Blog posts</h3>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">blog1</strong>
+                        <h3 class="mb-0">blog title</h3>
+                        <div class="mb-1 text-muted">Apr 21</div>
+                        <p class="card-text mb-auto">blog-heading</p>
+                        <button href="#" class="btn btn-warning btn-sm">Continue reading</button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="#" alt="blog-image" class="bd-placeholder-img" width="200" height="250"
+                            aria-label="Placeholder: Thumbnail" />
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div
+                    class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">blog2</strong>
+                        <h3 class="mb-0">blog title</h3>
+                        <div class="mb-1 text-muted">Apr 21</div>
+                        <p class="card-text mb-auto">blog-heading</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="#" alt="blog-image" class="bd-placeholder-img" width="200" height="250"
+                            aria-label="Placeholder: Thumbnail" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>What we do?</h4>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sed nobis non in ipsam culpa! Sed
+                    corrupti ipsam quis asperiores nisi minima quidem facere fuga fugit! Animi modi aliquam similique?</p>
+            </div>
+            <div class="col-md-6">
+                <h4>What we do?</h4>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia sed nobis non in ipsam culpa! Sed
+                    corrupti ipsam quis asperiores nisi minima quidem facere fuga fugit! Animi modi aliquam similique?</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Our Prices</h2>
+        <hr>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">lorem</h4>
+                </div>
+                <div class="card-body">
+                    <img src="#" , alt="img1" />
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-info">Buy now</button>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">lorem</h4>
+                </div>
+                <div class="card-body">
+                    <img src="#" , alt="img1" />
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-info">Get started</button>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">lorem</h4>
+                </div>
+                <div class="card-body">
+                    <img src="#" , alt="img1" />
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-info">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+     var slideIndex = 1;
+     showSlides(slideIndex);
+
+     function plusSlides(n) {
+     showSlides(slideIndex += n);
+     }
+
+     function currentSlide(n) {
+     showSlides(slideIndex = n);
+     }
+
+     function showSlides(n) {
+     var i;
+     var slides = document.getElementsByClassName("mySlides");
+     var dots = document.getElementsByClassName("dot");
+     if (n > slides.length) {slideIndex = 1}
+     if (n < 1) {slideIndex = slides.length}
+     for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    }
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+    </html>
